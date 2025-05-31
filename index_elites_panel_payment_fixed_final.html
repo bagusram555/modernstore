@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Elites Panel Store
+  </title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com">
+   function toggleNokos() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.toggle('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+    }
+    function toggleWebsite() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+      document.getElementById('jasaWebsite').classList.toggle('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+    }
+    function toggleBot() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.toggle('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+    }
+    function toggleScript() {
+      document.getElementById('jasaScript').classList.toggle('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+    }
+  </script>
+<style>
+   body { font-family: 'Poppins', sans-serif; }
+    .glow:hover { box-shadow: 0 0 10px #0ff; transition: 0.3s; }
+  </style>
+<style>
+   body {
+  position: relative;
+  overflow-x: hidden;
+}
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.08);
+  animation: float 20s linear infinite;
+}
+.bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 4s; }
+.bubble:nth-child(3) { width: 100px; height: 100px; left: 70%; animation-delay: 8s; }
+.bubble:nth-child(4) { width: 40px; height: 40px; left: 50%; animation-delay: 2s; }
+.bubble:nth-child(5) { width: 90px; height: 90px; left: 80%; animation-delay: 6s; }
+
+@keyframes float {
+  0% { bottom: -100px; transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { bottom: 100%; transform: translateX(-20px); }
+}
+  </style>
+<style>
+   /* Glow Section */
+.glow-section {
+  background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(9,9,121,0.1));
+  box-shadow: 0 0 30px rgba(0,255,255,0.15);
+  border-radius: 1rem;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Button Hover */
+button:hover, a:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* Section Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+<style>
+   /* NEON CARD SHADOW */
+.neon-glow {
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 10px rgba(0,255,255,0.3), 0 0 20px rgba(0,255,255,0.2);
+}
+
+/* SHINING TEXT GRADIENT */
+.shiny-text {
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-text 5s linear infinite;
+}
+@keyframes shine-text {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+/* FLOATING CARD */
+.floating-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 255, 255, 0.25);
+}
+
+/* GRADIENT BORDER WRAP */
+.gradient-border {
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #00f2fe, #4facfe) 1;
+  border-radius: 0.75rem;
+}
+  </style>
+<style>
+   /* PARALLAX BACKGROUND */
+.parallax-bg {
+  background-image: url('https://images.unsplash.com/photo-1607082349566-187342a3c51c?auto=format&fit=crop&w=1950&q=80');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* SHIMMER LINE */
+.shimmer-line {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+  background-size: 200% 100%;
+  animation: shimmerMove 5s linear infinite;
+  border-radius: 2px;
+}
+@keyframes shimmerMove {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* AURORA BUTTON */
+.aurora-button {
+  background: linear-gradient(120deg, #00f2fe, #4facfe);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+}
+.aurora-button:hover {
+  background: linear-gradient(120deg, #4facfe, #00f2fe);
+  transform: scale(1.05);
+}
+  </style>
+<style>
+   /* GLOWING BORDER ANIMATION */
+.glow-border {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #00f2fe, #4facfe);
+  animation: borderGlow 5s linear infinite alternate;
+}
+@keyframes borderGlow {
+  0% { border-image-source: linear-gradient(90deg, #00f2fe, #4facfe); }
+  100% { border-image-source: linear-gradient(90deg, #4facfe, #00f2fe); }
+}
+
+/* SECTION ZOOM ON LOAD */
+.zoom-load {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomFade 1s ease forwards;
+}
+@keyframes zoomFade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* PARTICLE BACKGROUND */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+  </style>
+<style>
+   #ambient-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -10;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.05), transparent 40%),
+              radial-gradient(circle at 70% 70%, rgba(255,255,255,0.03), transparent 40%);
+  animation: animateGlow 20s ease-in-out infinite alternate;
+}
+@keyframes animateGlow {
+  0% { background-position: 30% 30%, 70% 70%; }
+  100% { background-position: 32% 28%, 68% 72%; }
+}
+  </style>
+<style>
+   html { scroll-behavior: smooth; }
+.dark-mode {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+.dark-mode .bg-white { background-color: #1e293b !important; color: white !important; }
+.dark-mode input, .dark-mode textarea { background-color: #334155 !important; color: white !important; }
+  </style>
+<style>
+   .tab-button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tab-button:hover {
+  background-color: #2563eb;
+}
+  </style>
+<style>
+   /* 3D tilt effect + glow */
+.produk-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+.produk-card:hover {
+  transform: perspective(600px) rotateY(5deg) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,255,255,0.2);
+}
+
+/* Fade-in animation with delay */
+.fade-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+<style>
+   .bg-parallax {
+  background-image: linear-gradient(135deg, rgba(0,255,255,0.06) 25%, transparent 25%),
+                    linear-gradient(225deg, rgba(0,255,255,0.06) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0;
+  animation: moveBG 20s linear infinite;
+}
+@keyframes moveBG {
+  0% { background-position: 0 0; }
+  100% { background-position: 80px 80px; }
+}
+  </style>
+<style>
+   @keyframes bounceSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@keyframes pulseFast { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+
+.animate-bounce-slow { animation: bounceSlow 3s ease-in-out infinite; }
+.animate-pulse-fast { animation: pulseFast 1.2s ease-in-out infinite; }
+  </style>
+<style>
+   .glitch {
+  position: relative;
+  color: white;
+  animation: glitchAnim 2s infinite;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; overflow: hidden;
+}
+.glitch::before {
+  color: #0ff;
+  z-index: -1;
+  animation: glitchAnimBefore 2s infinite;
+}
+.glitch::after {
+  color: #f0f;
+  z-index: -2;
+  animation: glitchAnimAfter 2s infinite;
+}
+
+@keyframes glitchAnim {
+  0% { transform: none; }
+  20% { transform: skew(-2deg); }
+  40% { transform: skew(2deg); }
+  60% { transform: none; }
+}
+@keyframes glitchAnimBefore {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  20% { clip: rect(10px, 9999px, 30px, 0); left: 2px; }
+  40% { clip: rect(5px, 9999px, 25px, 0); left: -2px; }
+  60% { clip: rect(0, 9999px, 0, 0); left: 0; }
+}
+@keyframes glitchAnimAfter {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  20% { clip: rect(5px, 9999px, 20px, 0); left: -2px; }
+  40% { clip: rect(8px, 9999px, 30px, 0); left: 2px; }
+  60% { clip: rect(0, 9999px, 0, 0); left: 0; }
+}
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+<canvas id="glowLines" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-20;">
+</canvas>
+<div class="sticky top-16 z-40 bg-gray-900 px-4 py-2">
+<input class="w-full p-2 rounded border border-gray-500 bg-gray-800 text-white placeholder:text-gray-400" id="searchInput" onkeyup="filterProducts()" placeholder="🔍 Cari produk..." type="text"/>
+</div>
+<div class="fixed top-4 left-4 z-50">
+<button class="bg-white text-black px-3 py-1 rounded shadow hover:bg-gray-200" onclick="toggleDarkMode()">
+    🌓 Mode
+   </button>
+</div>
+<div id="ambient-particles">
+</div>
+<div class="hidden fixed bottom-5 left-5 bg-blue-600 text-white px-4 py-2 rounded shadow-lg transition-all" id="toastCart">
+   ✅ Berhasil ditambahkan ke keranjang!
+  </div>
+<canvas id="particle-canvas">
+</canvas>
+<div aria-hidden="true">
+<div class="bubble">
+</div>
+<div class="bubble">
+</div>
+<div class="bubble">
+</div>
+<div class="bubble">
+</div>
+<div class="bubble">
+</div>
+</div>
+<div class="hidden fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow-lg transition-all" id="toast">
+   Item ditambahkan!
+  </div>
+<!-- Header -->
+<header class="text-center py-6 bg-gray-800">
+<h1 class="text-3xl font-bold shiny-text">
+    Elites Panel Store
+   </h1>
+<p class="text-sm">
+    Solusi Panel Sosial Media &amp; PPOB
+   </p>
+</header>
+<!-- Hero Section -->
+<div class="shimmer-line">
+</div>
+<div class="text-center my-6">
+<button class="tab-button" onclick="alert('Filter: Semua')">
+    Semua
+   </button>
+<button class="tab-button" onclick="alert('Filter: Sosial Media')">
+    Sosial Media
+   </button>
+<button class="tab-button" onclick="alert('Filter: Game')">
+    Game
+   </button>
+<button class="tab-button" onclick="alert('Filter: Pulsa &amp; Data')">
+    Pulsa &amp; Data
+   </button>
+</div>
+<section class="text-center py-10 bg-blue-900 fade-in glow-section zoom-load transition-all duration-700 hover:translate-y-0 b g - p a r a l l a x f a d e - a n i m a t e">
+<h2 class="text-2xl font-semibold">
+    Selamat Datang di Panel Elit
+   </h2>
+<p class="text-gray-300">
+    Panel tercepat dan termurah untuk segala kebutuhan digital Anda.
+   </p>
+</section>
+<div class="shimmer-line">
+</div>
+<section class="py-8 bg-gray-800 text-center fade-in zoom-load transition-all duration-700 hover:translate-y-0 f a d e - a n i m a t e">
+<h3 class="text-xl font-bold text-cyan-400 mb-4">
+    Statistik Kami
+   </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+<div>
+<p class="text-3xl font-bold text-yellow-300" id="counter1">
+      0
+     </p>
+<p>
+      Total Pelanggan
+     </p>
+</div>
+<div>
+<p class="text-3xl font-bold text-yellow-300" id="counter2">
+      0
+     </p>
+<p>
+      Produk Terjual
+     </p>
+</div>
+<div>
+<p class="text-3xl font-bold text-yellow-300" id="counter3">
+      0
+     </p>
+<p>
+      Bot WA Aktif
+     </p>
+</div>
+<div>
+<p class="text-3xl font-bold text-yellow-300" id="counter4">
+      0
+     </p>
+<p>
+      Pengguna Bulanan
+     </p>
+</div>
+</div>
+</section>
+<!-- Layanan Unggulan -->
+<div class="shimmer-line">
+</div>
+<section class="grid md:grid-cols-3 gap-4 p-6 fade-in glow-section zoom-load transition-all duration-700 hover:translate-y-0 b g - p a r a l l a x f a d e - a n i m a t e">
+<div class="bg-gray-800 p-4 rounded-lg glow cursor-pointer t r a n s f o r m h o v e r : s c a l e - 1 0 5 t r a n s i t i o n - a l l d u r a t i o n - 3 0 0 f l o a t i n g - c a r d g r a d i e n t - b o r d e r" onclick="toggleProdukKebutuhan()">
+    📦 Produk Kebutuhan
+    <br/>
+<small>
+     Klik untuk lihat produk
+    </small>
+</div>
+<div class="bg-gray-800 p-4 rounded-lg glow">
+    🎯 Youtube Subscriber
+    <br/>
+<small>
+     Real &amp; aman untuk channel Anda.
+    </small>
+</div>
+<div class="bg-gray-800 p-4 rounded-lg glow">
+    📲 Pulsa &amp; PPOB
+    <br/>
+<small>
+     Isi pulsa, data, listrik langsung dari dashboard.
+    </small>
+</div>
+</section>
+<!-- Produk untuk Tiktok Views -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-800 rounded-lg mx-4 my-4 fade-in zoom-load transition-all duration-700 hover:translate-y-0 f a d e - a n i m a t e" id="produkKebutuhan">
+<h3 class="text-xl font-bold mb-4 text-cyan-400">
+    Produk Kebutuhan Tersedia
+   </h3>
+<ul class="grid md:grid-cols-2 gap-4">
+<li class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-cyan-700 transition" onclick="togglePanelWA()">
+     📦 Panel Bot WhatsApp
+    </li>
+<li class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-cyan-700 transition" onclick="toggleNokos()">
+     📱 Nokos Indo
+    </li>
+<li class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-cyan-700 transition" onclick="toggleWebsite()">
+     💻 Jasa Buat Website
+    </li>
+<li class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-cyan-700 transition" onclick="toggleBot()">
+     🤖 Jasa Pasang Bot
+    </li>
+<li class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-cyan-700 transition" onclick="toggleScript()">
+     🧠 Jasa Buat Script
+    </li>
+</ul>
+</section>
+<!-- Produk Nokos Indo -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-700 rounded-lg mx-4 my-4 fade-in glow-section zoom-load transition-all duration-700 hover:translate-y-0 b g - p a r a l l a x f a d e - a n i m a t e" id="nokosIndo">
+<h4 class="text-lg font-semibold mb-3 text-cyan-300">
+    Pilih Nokos Indo:
+   </h4>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos Telkomsel
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos Telkomsel', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos Telkomsel', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos Smartfren
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos Smartfren', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos Smartfren', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos XL
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos XL', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos XL', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos Indosat
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos Indosat', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos Indosat', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos By U
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos By U', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos By U', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Nokos Axis
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Nokos Axis', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Nokos Axis', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+</div>
+</section>
+<!-- Produk Jasa Buat Website -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-700 rounded-lg mx-4 my-4 fade-in zoom-load transition-all duration-700 hover:translate-y-0 f a d e - a n i m a t e" id="jasaWebsite">
+<h4 class="text-lg font-semibold mb-3 text-cyan-300">
+    Pilih Paket Jasa Website:
+   </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Desain Warriors
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Desain Warriors', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Desain Warriors', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Desain Elite
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp10.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Desain Elite', 'Rp10.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Desain Elite', 'Rp10.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Desain Menengah
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp20.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Desain Menengah', 'Rp20.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Desain Menengah', 'Rp20.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Desain Profesional
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp30.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Desain Profesional', 'Rp30.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Desain Profesional', 'Rp30.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Desain Modern &amp; Elegan Keren
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp50.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Desain Modern &amp; Elegan Keren', 'Rp50.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Desain Modern &amp; Elegan Keren', 'Rp50.000')">
+      🧾 Faktur
+     </button>
+</div>
+</div>
+</section>
+<!-- Produk Jasa Pasang Bot -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-700 rounded-lg mx-4 my-4 fade-in glow-section zoom-load transition-all duration-700 hover:translate-y-0 b g - p a r a l l a x f a d e - a n i m a t e" id="jasaBot">
+<h4 class="text-lg font-semibold mb-3 text-cyan-300">
+    Pilih Layanan Pasang Bot:
+   </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Pasang Biasa
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp3.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Pasang Biasa', 'Rp3.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Pasang Biasa', 'Rp3.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Pasang + Rename
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Pasang + Rename', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Pasang + Rename', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Pasang + Rename Full + Bebas Request
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp10.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Pasang + Rename Full + Bebas Request', 'Rp10.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Pasang + Rename Full + Bebas Request', 'Rp10.000')">
+      🧾 Faktur
+     </button>
+</div>
+</div>
+</section>
+<!-- Produk Jasa Buat Script -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-700 rounded-lg mx-4 my-4 fade-in zoom-load transition-all duration-700 hover:translate-y-0 f a d e - a n i m a t e" id="jasaScript">
+<h4 class="text-lg font-semibold mb-3 text-cyan-300">
+    Pilih Paket Script Bot:
+   </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot WA Sedang
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot WA Sedang', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot WA Sedang', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot WA Full Fitur Bebas Request
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp15.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot WA Full Fitur Bebas Request', 'Rp15.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot WA Full Fitur Bebas Request', 'Rp15.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot Tele Biasa
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot Tele Biasa', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot Tele Biasa', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot Tele Full Fitur dan Setting
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp17.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot Tele Full Fitur dan Setting', 'Rp17.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot Tele Full Fitur dan Setting', 'Rp17.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot Bug WA
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp20.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot Bug WA', 'Rp20.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot Bug WA', 'Rp20.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      Script Bot Bug WA via Tele
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp30.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('Script Bot Bug WA via Tele', 'Rp30.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('Script Bot Bug WA via Tele', 'Rp30.000')">
+      🧾 Faktur
+     </button>
+</div>
+</div>
+</section>
+<!-- Pilihan Panel Bot WhatsApp -->
+<div class="shimmer-line">
+</div>
+<section class="hidden p-6 bg-gray-700 rounded-lg mx-4 my-4 fade-in glow-section zoom-load transition-all duration-700 hover:translate-y-0 b g - p a r a l l a x f a d e - a n i m a t e" id="panelWA">
+<h4 class="text-lg font-semibold mb-3 text-cyan-300">
+    Pilih Kapasitas Panel Bot WA:
+   </h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      1 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp1.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('1 GB', 'Rp1.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('1 GB', 'Rp1.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      2 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp2.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('2 GB', 'Rp2.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('2 GB', 'Rp2.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      3 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp3.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('3 GB', 'Rp3.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('3 GB', 'Rp3.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      4 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp4.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('4 GB', 'Rp4.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('4 GB', 'Rp4.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      5 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp5.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('5 GB', 'Rp5.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('5 GB', 'Rp5.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      6 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp6.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('6 GB', 'Rp6.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('6 GB', 'Rp6.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      7 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp7.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('7 GB', 'Rp7.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('7 GB', 'Rp7.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      8 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp8.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('8 GB', 'Rp8.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('8 GB', 'Rp8.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      9 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp9.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('9 GB', 'Rp9.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('9 GB', 'Rp9.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      10 GB
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp10.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('10 GB', 'Rp10.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('10 GB', 'Rp10.000')">
+      🧾 Faktur
+     </button>
+</div>
+<div class="bg-gray-600 p-3 rounded flex flex-col justify-between text-center t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 h o v e r : s c a l e - 1 0 5 s h a d o w - m d g l a s s - c a r d f l o a t i n g - c a r d n e o n - g l o w g r a d i e n t - b o r d e r g l o w - b o r d e r p r o d u k - c a r d t r a n s i t i o n - t r a n s f o r m d u r a t i o n - 3 0 0 e a s e - i n - o u t h o v e r : s c a l e - 1 0 5 h o v e r : s h a d o w - x l">
+<span class="text-lg font-bold">
+      UNLI
+     </span>
+<span class="text-yellow-300 mb-2">
+      Rp12.000
+     </span>
+<button class="aurora-button ml-1 a n i m a t e - p u l s e - f a s t" onclick="addToCart('UNLI', 'Rp12.000')">
+      ➕ Tambah ke Keranjang
+     </button>
+<a class="aurora-button ml-1 mt-1 aurora-button" href="#" onclick="showCheckout()" target="">
+      🧾 Lihat Keranjang
+     </a>
+<button class="aurora-button ml-1 mt-1" onclick="showToast()">
+      🛒
+     </button>
+<button class="aurora-button ml-1 mt-1" onclick="previewInvoice('UNLI', 'Rp12.000')">
+      🧾 Faktur
+     </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<div class="shimmer-line">
+</div>
+<section class="p-6 bg-gray-800 mt-8 rounded-lg text-left max-w-4xl mx-auto fade-in zoom-load transition-all duration-700 hover:translate-y-0 f a d e - a n i m a t e">
+<h3 class="text-xl font-bold text-cyan-400 mb-4">
+    Pertanyaan Umum
+   </h3>
+<div class="space-y-4">
+<details class="bg-gray-700 p-4 rounded">
+<summary class="cursor-pointer font-semibold">
+      Bagaimana cara membeli produk?
+     </summary>
+<p class="mt-2 text-sm text-gray-300">
+      Klik tombol beli sekarang, Anda akan diarahkan ke WhatsApp.
+     </p>
+</details>
+<details class="bg-gray-700 p-4 rounded">
+<summary class="cursor-pointer font-semibold">
+      Apakah produk langsung aktif?
+     </summary>
+<p class="mt-2 text-sm text-gray-300">
+      Ya, rata-rata layanan kami aktif dalam 1-5 menit.
+     </p>
+</details>
+<details class="bg-gray-700 p-4 rounded">
+<summary class="cursor-pointer font-semibold">
+      Apakah ada garansi?
+     </summary>
+<p class="mt-2 text-sm text-gray-300">
+      Kami memberikan garansi 1x24 jam untuk layanan yang bermasalah.
+     </p>
+</details>
+</div>
+</section>
+<footer class="text-center py-6 text-sm bg-gray-800 mt-10">
+   © 2025 ElitesPanel. All rights reserved.
+  </footer>
+<!-- Script -->
+<script>
+   function toggleProdukKebutuhan() {
+      document.getElementById('produkKebutuhan').classList.toggle('hidden');
+    }
+    function togglePanelWA() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+      document.getElementById('panelWA').classList.toggle('hidden');
+    }
+      function toggleNokos() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.toggle('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+    }
+    function toggleWebsite() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+      document.getElementById('jasaWebsite').classList.toggle('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+    }
+    function toggleBot() {
+      document.getElementById('jasaScript').classList.add('hidden');
+      document.getElementById('jasaBot').classList.toggle('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+    }
+    function toggleScript() {
+      document.getElementById('jasaScript').classList.toggle('hidden');
+      document.getElementById('jasaWebsite').classList.add('hidden');
+      document.getElementById('panelWA').classList.add('hidden');
+      document.getElementById('nokosIndo').classList.add('hidden');
+      document.getElementById('jasaBot').classList.add('hidden');
+    }
+
+function showToast() {
+  const toast = document.getElementById('toast');
+  if (toast) {
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('hidden'), 3000);
+  }
+}
+function previewInvoice(product, price) {
+  alert(`🧾 Invoice:\nProduk: ${product}\nHarga: ${price}\nSilakan lanjutkan ke WhatsApp untuk menyelesaikan pembayaran.`);
+}
+function animateCounter(id, end) {
+  let start = 0;
+  const el = document.getElementById(id);
+  const increment = end / 50;
+  const counter = setInterval(() => {
+    start += increment;
+    if (start >= end) {
+      el.textContent = end;
+      clearInterval(counter);
+    } else {
+      el.textContent = Math.floor(start);
+    }
+  }, 20);
+}
+window.onload = () => {
+  animateCounter("counter1", 12000);
+  animateCounter("counter2", 68000);
+  animateCounter("counter3", 150);
+  animateCounter("counter4", 950);
+};
+  
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const trigger = window.innerHeight * 0.9;
+    if (top < trigger) el.classList.add('animate');
+  });
+});
+  </script>
+<script>
+   const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+let width, height;
+let particles = [];
+
+function resizeCanvas() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function createParticles() {
+  particles = [];
+  for (let i = 0; i < 100; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      radius: Math.random() * 2 + 1
+    });
+  }
+}
+
+function drawParticles() {
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = 'rgba(0,255,255,0.2)';
+  particles.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fill();
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > width) p.vx *= -1;
+    if (p.y < 0 || p.y > height) p.vy *= -1;
+  });
+  requestAnimationFrame(drawParticles);
+}
+
+createParticles();
+drawParticles();
+  </script>
+<!-- Modal Ringkasan Checkout -->
+<div class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center" id="checkoutModal">
+<div class="bg-white text-black rounded-lg p-6 w-96 max-w-full shadow-xl">
+<h2 class="text-lg font-bold mb-4">
+     🛒 Ringkasan Pesanan
+    </h2>
+<div class="mb-4">
+<label class="block text-sm font-medium text-black mb-1">
+      Nama Anda:
+     </label>
+<input class="w-full px-2 py-1 rounded border border-gray-400" id="buyerName" placeholder="Contoh: Budi Santoso" type="text"/>
+</div>
+<ul class="text-sm mb-4 space-y-1" id="cartItems">
+</ul>
+<p class="text-right font-semibold text-black mb-4">
+     Total:
+     <span id="totalHarga">
+      Rp0
+     </span>
+</p>
+<div class="text-right space-x-2">
+<button class="px-4 py-1 rounded bg-gray-300 hover:bg-gray-400" onclick="closeCheckout()">
+      Batal
+     </button>
+<a class="px-4 py-1 rounded bg-green-500 hover:bg-green-600 text-white" href="#" id="checkoutNowBtn" target="_blank">
+      Kirim ke WA
+     </a>
+<button class="ml-2 bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded" onclick="openPayment()">
+      💳 Bayar Sekarang
+     </button>
+</div>
+</div>
+</div>
+<script>
+   function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+function loadCart() {
+  const saved = localStorage.getItem('cart');
+  if (saved) cart = JSON.parse(saved);
+}
+function addToCart(product, price) {
+  cart.push({ product, price });
+  saveCart();
+  showToast();
+}
+window.onload = () => {
+  loadCart();
+  animateCounter("counter1", 12000);
+  animateCounter("counter2", 68000);
+  animateCounter("counter3", 150);
+  animateCounter("counter4", 950);
+};
+
+   let cart = [];
+
+function addToCart(product, price) {
+  cart.push({ product, price });
+  showToast();
+}
+
+function showCheckout() {
+  const modal = document.getElementById("checkoutModal");
+  const list = document.getElementById("cartItems");
+  const link = document.getElementById("checkoutNowBtn");
+  list.innerHTML = cart.map(item => `<li>• ${item.product} - ${item.price}</li>`).join("");
+  const pesan = encodeURIComponent(
+    "Saya ingin membeli produk berikut:%0A" +
+    cart.map(i => `- ${i.product} (${i.price})`).join("%0A")
+  );
+  link.href = "https://wa.me/6288298717014?text=" + pesan;
+  modal.classList.remove("hidden");
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutModal").classList.add("hidden");
+}
+  
+function showToast() {
+  const toast = document.getElementById("toastCart");
+  toast.classList.remove("hidden");
+  setTimeout(() => toast.classList.add("hidden"), 2000);
+}
+  
+function parseHarga(hargaStr) {
+  // Ambil hanya angka dari format harga: "Rp12.000" => 12000
+  return parseInt(hargaStr.replace(/[^0-9]/g, ''));
+}
+
+function formatRupiah(angka) {
+  return 'Rp' + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function updateTotalHarga() {
+  const total = cart.reduce((sum, item) => sum + parseHarga(item.price), 0);
+  document.getElementById("totalHarga").textContent = formatRupiah(total);
+}
+
+function showCheckout() {
+  const modal = document.getElementById("checkoutModal");
+  const list = document.getElementById("cartItems");
+  const link = document.getElementById("checkoutNowBtn");
+  list.innerHTML = cart.map(item => `<li>• ${item.product} - ${item.price}</li>`).join("");
+  const pesan = encodeURIComponent(
+    "Saya ingin membeli produk berikut:%0A" +
+    cart.map(i => `- ${i.product} (${i.price})`).join("%0A")
+  );
+  link.href = "https://wa.me/6288298717014?text=" + pesan;
+  updateTotalHarga();
+  modal.classList.remove("hidden");
+}
+  
+function showCheckout() {
+  const modal = document.getElementById("checkoutModal");
+  const list = document.getElementById("cartItems");
+  const link = document.getElementById("checkoutNowBtn");
+  const name = document.getElementById("buyerName").value || "Tanpa Nama";
+
+  list.innerHTML = cart.map(item => `<li>• ${item.product} - ${item.price}</li>`).join("");
+  const pesan = encodeURIComponent(
+    `Halo, saya *${name}* ingin membeli produk berikut:%0A` +
+    cart.map(i => `- ${i.product} (${i.price})`).join("%0A")
+  );
+  link.href = "https://wa.me/6288298717014?text=" + pesan;
+  updateTotalHarga();
+  modal.classList.remove("hidden");
+}
+  </script>
+<div class="fixed bottom-4 right-4 z-50">
+<button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg a n i m a t e - p u l s e - f a s t" onclick="showCheckout()">
+    📲 Checkout via WhatsApp
+   </button>
+</div>
+<footer class="fixed bottom-0 w-full bg-gradient-to-r from-cyan-500 to-blue-700 text-white text-center py-2 text-sm shadow-inner z-40">
+   ElitesPanel ✦ Powered by Kreativitas ✦ Est. 2022
+  </footer>
+<button class="fixed bottom-16 right-4 z-40 bg-cyan-600 hover:bg-cyan-500 text-white text-xl px-3 py-1 rounded-full shadow-lg" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+   ⬆️
+  </button>
+<script>
+   function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+  </script>
+<script>
+   function filterProducts() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toLowerCase();
+  const products = document.querySelectorAll('.produk-card');
+  products.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(filter) ? 'block' : 'none';
+  });
+}
+  </script>
+<script>
+   function animateOnScroll() {
+  const elements = document.querySelectorAll('.fade-animate');
+  elements.forEach((el, index) => {
+    const top = el.getBoundingClientRect().top;
+    const trigger = window.innerHeight * 0.9;
+    if (top < trigger) {
+      el.style.animationDelay = (index * 0.05) + 's';
+      el.classList.add('animate');
+    }
+  });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+  </script>
+<script>
+   function setAutoDarkMode() {
+  const hour = new Date().getHours();
+  if (hour >= 18 || hour < 6) {
+    document.body.classList.add('dark-mode');
+  }
+}
+window.addEventListener("load", setAutoDarkMode);
+  </script>
+<script>
+   const c = document.getElementById('glowLines');
+const ctx = c.getContext('2d');
+function resizeGlow() { c.width = window.innerWidth; c.height = window.innerHeight; }
+resizeGlow(); window.addEventListener('resize', resizeGlow);
+let lines = Array.from({length: 30}, () => ({
+  x: Math.random() * c.width,
+  y: Math.random() * c.height,
+  dx: (Math.random() - 0.5) * 0.5,
+  dy: (Math.random() - 0.5) * 0.5
+}));
+function drawLines() {
+  ctx.clearRect(0, 0, c.width, c.height);
+  ctx.strokeStyle = "rgba(0,255,255,0.05)";
+  ctx.lineWidth = 1;
+  lines.forEach(p => {
+    p.x += p.dx; p.y += p.dy;
+    if (p.x < 0 || p.x > c.width) p.dx *= -1;
+    if (p.y < 0 || p.y > c.height) p.dy *= -1;
+    ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x + p.dx * 20, p.y + p.dy * 20); ctx.stroke();
+  });
+  requestAnimationFrame(drawLines);
+}
+drawLines();
+  </script>
+<script>
+   const clickSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_67bd93c715.mp3");
+document.querySelectorAll("button, a").forEach(el => {
+  el.addEventListener("click", () => {
+    clickSound.volume = 0.1;
+    clickSound.play();
+  });
+});
+  </script>
+<!-- Modal Pembayaran -->
+<div class="hidden fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center" id="paymentModal">
+<div class="bg-white text-black rounded-lg p-6 w-full max-w-md shadow-xl">
+<h2 class="text-xl font-bold mb-4">
+     💳 Pembayaran Otomatis
+    </h2>
+<input class="w-full mb-2 p-2 border rounded" id="payName" placeholder="Nama Lengkap" type="text"/>
+<input class="w-full mb-2 p-2 border rounded" id="payEmail" placeholder="Email Aktif" type="email"/>
+<input class="w-full mb-2 p-2 border rounded" id="payHP" placeholder="Nomor WhatsApp Aktif" type="tel"/>
+<select class="w-full mb-4 p-2 border rounded" id="payMethod">
+<option value="QRIS">
+      QRIS
+     </option>
+<option value="VA">
+      Virtual Account
+     </option>
+<option value="COD">
+      Bayar di Tempat
+     </option>
+</select>
+<div class="text-right">
+<button class="bg-gray-400 px-3 py-1 rounded mr-2" onclick="closePayment()">
+      Batal
+     </button>
+<button class="bg-green-600 text-white px-4 py-1 rounded" onclick="confirmPayment()">
+      Bayar Sekarang
+     </button>
+</div>
+</div>
+</div>
+<!-- Notifikasi Dinamis -->
+<div class="hidden fixed bottom-5 right-5 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50" id="notifToast">
+   ✅ Pembayaran berhasil dikirim!
+  </div>
+<script>
+   function confirmPayment() {
+  const nama = document.getElementById("payName").value.trim();
+  const email = document.getElementById("payEmail").value.trim();
+  const hp = document.getElementById("payHP").value.trim();
+  const metode = document.getElementById("payMethod").value;
+  const total = document.getElementById("totalHarga").textContent;
+  const produk = cart.map(i => `${i.product} (${i.price})`).join(", ");
+
+  if (!nama || !email || !hp) {
+    alert("⚠️ Mohon isi semua data: Nama, Email, dan No HP!");
+    return;
+  }
+
+  document.getElementById("paymentModal").classList.add("hidden");
+
+  fetch("https://script.google.com/macros/s/AKfycbwX7m5SlSz0RXa3lmsY8Per5pyueW3MZHspMuUsuli6OToB4HkHM139ozitzibPXkT2aA/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      nama: nama,
+      email: email,
+      hp: hp,
+      metode: metode,
+      produk: produk,
+      total: total
+    })
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("SUKSES:", response);
+    showNotifToast("✅ Pembayaran berhasil dikirim!");
+  })
+  .catch(err => {
+    console.error("GAGAL:", err);
+    alert("❌ Gagal mengirim data ke Google Sheets. Coba lagi.");
+  });
+}
+  </script>
+
+<script>
+function confirmPayment() {
+  const nama = document.getElementById("payName")?.value.trim();
+  const email = document.getElementById("payEmail")?.value.trim();
+  const hp = document.getElementById("payHP")?.value.trim();
+  const metode = document.getElementById("payMethod")?.value;
+  const total = document.getElementById("totalHarga")?.textContent || 'Rp0';
+  const produk = (typeof cart !== 'undefined') ? cart.map(i => `${i.product} (${i.price})`).join(", ") : "-";
+
+  if (!nama || !email || !hp) {
+    alert("⚠️ Mohon isi semua data: Nama, Email, dan No HP!");
+    return;
+  }
+
+  document.getElementById("paymentModal")?.classList.add("hidden");
+
+  fetch("https://script.google.com/macros/s/AKfycbwX7m5SlSz0RXa3lmsY8Per5pyueW3MZHspMuUsuli6OToB4HkHM139ozitzibPXkT2aA/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      nama: nama,
+      email: email,
+      hp: hp,
+      metode: metode,
+      produk: produk,
+      total: total
+    })
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("SUKSES:", response);
+    showNotifToast("✅ Pembayaran berhasil dikirim!");
+  })
+  .catch(err => {
+    console.error("GAGAL:", err);
+    alert("❌ Gagal mengirim data ke Google Sheets. Coba lagi.");
+  });
+}
+</script>
+</body>
+</html>
